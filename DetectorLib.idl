@@ -1,0 +1,249 @@
+// DetectorLib.idl : DetectorLib 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(DetectorLib.tlb)和封送处理代码。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(41F30060-F1C4-4526-BBD4-389213097634),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+
+interface ISocketChannel : IDispatch{
+	[propget, id(1)] HRESULT RemoteIP([out, retval] BSTR* pVal);
+	[propput, id(1)] HRESULT RemoteIP([in] BSTR newVal);
+	[propget, id(2)] HRESULT RemotePort([out, retval] SHORT* pVal);
+	[propput, id(2)] HRESULT RemotePort([in] SHORT newVal);
+	[id(3)] HRESULT Open(void);
+	[id(4)] HRESULT Close(void);
+	[propget, id(5)] HRESULT ObjectHandle([out, retval] ULONG* pVal);
+};
+[
+	object,
+	uuid(51B14E26-E6CC-473A-82EB-6401661F5300),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IEngine : IDispatch{
+	[id(1)] HRESULT Start(void);
+	[id(2)] HRESULT Stop(void);
+	[propget, id(3)] HRESULT ChannelHandle([out, retval] ULONG* pVal);
+	[propput, id(3)] HRESULT ChannelHandle([in] ULONG newVal);
+	[propget, id(4)] HRESULT ObjectHandle([out, retval] ULONG* pVal);
+};
+[
+	object,
+	uuid(604C6AA2-858A-437A-A65A-249894D90B3B),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICmdCoderDT : IDispatch{
+};
+[
+	object,
+	uuid(47FEC6A5-CD9A-4112-875E-44E0BA587EF3),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICmdController : IDispatch{
+};
+[
+	object,
+	uuid(6BFD301F-AA15-4295-BF88-AA7657F10C94),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IImgController : IDispatch{
+};
+[
+	object,
+	uuid(17C49305-148A-4DFF-A8A4-E63D7DB1746F),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IImgCoder : IDispatch{
+};
+[
+	object,
+	uuid(3A62B931-C8B7-44A3-A148-6FB1254C6080),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IImgDisplay : IDispatch{
+	[propput, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([out,retval]VARIANT_BOOL* pbool);
+	[propput, bindable, requestedit, id(DISPID_DRAWMODE)]
+	HRESULT DrawMode([in]long mode);
+	[propget, bindable, requestedit, id(DISPID_DRAWMODE)]
+	HRESULT DrawMode([out, retval]long* pmode);
+	[propget, bindable, requestedit, id(DISPID_HWND)]
+	HRESULT HWND([out, retval]LONG_PTR* pHWND);
+	[propput, bindable, requestedit, id(DISPID_BORDERVISIBLE)]
+	HRESULT BorderVisible([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_BORDERVISIBLE)]
+	HRESULT BorderVisible([out, retval]VARIANT_BOOL* pbool);
+	[id(1), helpstring("method Open")] HRESULT Open([in] ULONG width, [in] ULONG height);
+	[id(2), helpstring("method Close")] HRESULT Close(void);
+	[propget, id(3), helpstring("property ImgHandle")] HRESULT ImgHandle([out, retval] ULONG* pVal);
+	[propput, id(3), helpstring("property ImgHandle")] HRESULT ImgHandle([in] ULONG newVal);
+	[propget, id(4), helpstring("property MapStart")] HRESULT MapStart([out, retval] ULONG* pVal);
+	[propput, id(4), helpstring("property MapStart")] HRESULT MapStart([in] ULONG newVal);
+	[propget, id(5), helpstring("property MapEnd")] HRESULT MapEnd([out, retval] ULONG* pVal);
+	[propput, id(5), helpstring("property MapEnd")] HRESULT MapEnd([in] ULONG newVal);
+};
+
+[
+	object,
+	uuid(E5CBD205-BBD6-4EAD-9943-6DAE0C27F6AA),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IImgObject : IDispatch{
+	[propget, id(1)] HRESULT Width([out, retval] ULONG* pVal);
+	[propget, id(2)] HRESULT Height([out, retval] ULONG* pVal);
+	[propget, id(3)] HRESULT Deepth([out, retval] ULONG* pVal);
+	[propget, id(4)] HRESULT Pixel([in] ULONG x, [in] ULONG y, [out, retval] ULONG* pVal);
+	[propput, id(4)] HRESULT Pixel([in] ULONG x, [in] ULONG y, [in] ULONG newVal);
+	[propget, id(5)] HRESULT ImageLineAddress([in] ULONG line, [out, retval] ULONG* pVal);
+};
+[
+	uuid(8732FF44-88F5-41B0-B389-A1EE52C2F99E),
+	version(1.0),
+]
+library DetectorLibLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(0F83023B-805A-4A9C-8D72-E684E229C215)		
+	]
+	dispinterface _ISocketChannelEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(10F87131-B7BC-4185-8CB8-31CC3C60577C)		
+	]
+	coclass SocketChannel
+	{
+		[default] interface ISocketChannel;
+		[default, source] dispinterface _ISocketChannelEvents;
+	};
+	[
+		uuid(E9687DF0-B2DF-4C05-B6C6-6EA90CBD15E6)		
+	]
+	dispinterface _IEngineEvents
+	{
+		properties:
+		methods:
+			[id(1), helpstring("method OnDataReady")] void OnDataReady([in] BYTE* buf, int size);
+			[id(2), helpstring("method OnConnect")] void OnConnect(void);
+			[id(3), helpstring("method OnDisconnect")] void OnDisconnect(void);
+	};
+	[
+		uuid(20DCFF7C-A385-41D6-B258-C0D4CCC55C95)		
+	]
+	coclass Engine
+	{
+		[default] interface IEngine;
+		[default, source] dispinterface _IEngineEvents;
+	};
+	[
+		uuid(BD9FA336-671F-499A-9FFB-0288ADC24DD8)		
+	]
+	dispinterface _ICmdCoderDTEvents
+	{
+		properties:
+		methods:
+
+	};
+	[
+		uuid(E0D8E9B5-B982-4863-A506-3B2B3BBD716D)		
+	]
+	coclass CmdCoderDT
+	{
+		[default] interface ICmdCoderDT;
+		[default, source] dispinterface _ICmdCoderDTEvents;
+	};
+	[
+		uuid(C172B127-87DD-49EB-8638-B9E8DB4F5E2D)		
+	]
+	coclass CmdController
+	{
+		[default] interface ICmdController;
+	};
+	[
+		uuid(4B563493-9C79-45E5-BD37-BCEB3644129A)		
+	]
+	dispinterface _IImgControllerEvents
+	{
+		properties:
+		methods:
+			[id(1), helpstring("method FrameReady")] HRESULT FrameReady(void);
+	};
+	[
+		uuid(7AE0CEC0-6577-4F66-AD83-198782B9E0FC)		
+	]
+	coclass ImgController
+	{
+		[default] interface IImgController;
+		[default, source] dispinterface _IImgControllerEvents;
+	};
+	[
+		uuid(9D27632C-BC4A-40D6-86B9-A081BB352002)		
+	]
+	coclass ImgCoder
+	{
+		[default] interface IImgCoder;
+	};
+	[
+		uuid(0434EF0D-E7D4-4276-BE58-296B994C5C8A)		
+	]
+	dispinterface _IImgDisplayEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(5DC9AE41-0C25-4F75-BA53-734A8F0E6394),		
+		control
+	]
+	coclass ImgDisplay
+	{
+		[default] interface IImgDisplay;
+		[default, source] dispinterface _IImgDisplayEvents;
+	};
+	[
+		uuid(09AD259C-FAA0-434A-B2B0-E26EEA9E8F3B)		
+	]
+	dispinterface _IImgObjectEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(0CF690E8-286B-4483-B84A-488327104BAE)		
+	]
+	coclass ImgObject
+	{
+		[default] interface IImgObject;
+		[default, source] dispinterface _IImgObjectEvents;
+	};
+};
+

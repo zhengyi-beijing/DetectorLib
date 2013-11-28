@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="生成的文件">
+      <UniqueIdentifier>{36cf7f81-ca70-40f9-bca3-3cdefdd06961}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectorLib.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectorLib_i.c">
+      <Filter>生成的文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketChannel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdCoderDT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgCoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgDisplay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChannelIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChannelStatus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChannelStatusIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdCoderImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdConsumerIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdControllerImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdDeCoderImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdEnCoderIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CmdEnCoderImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataConsumerIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataProvider.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DeCoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DIBImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DisplayIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EngineIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EngineImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ICmdConsumer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImgConsumerIF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImgControllerImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImgDeCoderImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImgDisplayImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImgObjectImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ITPDeCoderImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SocketChannelImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VDCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectorLib_i.h">
+      <Filter>生成的文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_ISocketChannelEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketChannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_IEngineEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_ICmdCoderDTEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdCoderDT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_IImgControllerEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgCoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_IImgDisplayEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgDisplay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChannelIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChannelStatus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChannelStatusIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdCoderImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdConsumerIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdControllerImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdDeCoderImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdEnCoderIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CmdEnCoderImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataConsumerIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataProvider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DeCoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DIBImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DisplayIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EngineIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EngineImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ICmdConsumer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImgConsumerIF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImgControllerImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImgDeCoderImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImgDisplayImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImgObjectImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITPDeCoderImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SocketChannelImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VDCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_IImgObjectEvents_CP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibConst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DetectorLib.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="DetectorLib.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="DetectorLib.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="SocketChannel.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Engine.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="CmdCoderDT.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="CmdController.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImgController.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImgCoder.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImgDisplay.htm" />
+    <None Include="ImgDisplay.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImgDisplay.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImgObject.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="DetectorLib.idl">
+      <Filter>源文件</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

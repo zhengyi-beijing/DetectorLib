@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD6C9C71-7674-408C-A7F1-DB6201996B40}</ProjectGuid>
+    <Keyword>AtlProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>DetectorLib_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>DetectorLib_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>DetectorLib_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)DetectorLib.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\DetectorLib.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RegisterOutput>true</RegisterOutput>
+      <PerUserRedirection>true</PerUserRedirection>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>DetectorLib_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>DetectorLib_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>DetectorLib_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)DetectorLib.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\DetectorLib.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RegisterOutput>true</RegisterOutput>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CmdCoderDT.cpp" />
+    <ClCompile Include="CmdController.cpp" />
+    <ClCompile Include="DetectorLib.cpp" />
+    <ClCompile Include="DetectorLib_i.c">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="ImgCoder.cpp" />
+    <ClCompile Include="ImgController.cpp" />
+    <ClCompile Include="ImgDisplay.cpp" />
+    <ClCompile Include="ImgObject.cpp" />
+    <ClCompile Include="SocketChannel.cpp" />
+    <ClCompile Include="src\ChannelIF.cpp" />
+    <ClCompile Include="src\ChannelStatus.cpp" />
+    <ClCompile Include="src\ChannelStatusIF.cpp" />
+    <ClCompile Include="src\CmdCoderImpl.cpp" />
+    <ClCompile Include="src\CmdConsumerIF.cpp" />
+    <ClCompile Include="src\CmdControllerImpl.cpp" />
+    <ClCompile Include="src\CmdDeCoderImpl.cpp" />
+    <ClCompile Include="src\CmdEnCoderIF.cpp" />
+    <ClCompile Include="src\CmdEnCoderImpl.cpp" />
+    <ClCompile Include="src\DataConsumerIF.cpp" />
+    <ClCompile Include="src\DataProvider.cpp" />
+    <ClCompile Include="src\DeCoder.cpp" />
+    <ClCompile Include="src\DIBImage.cpp" />
+    <ClCompile Include="src\DisplayIF.cpp" />
+    <ClCompile Include="src\EngineIF.cpp" />
+    <ClCompile Include="src\EngineImpl.cpp" />
+    <ClCompile Include="src\ICmdConsumer.cpp" />
+    <ClCompile Include="src\ImgConsumerIF.cpp" />
+    <ClCompile Include="src\ImgControllerImpl.cpp" />
+    <ClCompile Include="src\ImgDeCoderImpl.cpp" />
+    <ClCompile Include="src\ImgDisplayImpl.cpp" />
+    <ClCompile Include="src\ImgObjectImpl.cpp" />
+    <ClCompile Include="src\ITPDeCoderImpl.cpp" />
+    <ClCompile Include="src\SocketChannelImpl.cpp" />
+    <ClCompile Include="src\VDCmd.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CmdCoderDT.h" />
+    <ClInclude Include="CmdController.h" />
+    <ClInclude Include="DetectorLib_i.h" />
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="ImgCoder.h" />
+    <ClInclude Include="ImgController.h" />
+    <ClInclude Include="ImgDisplay.h" />
+    <ClInclude Include="ImgObject.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SocketChannel.h" />
+    <ClInclude Include="src\ChannelIF.h" />
+    <ClInclude Include="src\ChannelStatus.h" />
+    <ClInclude Include="src\ChannelStatusIF.h" />
+    <ClInclude Include="src\CmdCoderImpl.h" />
+    <ClInclude Include="src\CmdConsumerIF.h" />
+    <ClInclude Include="src\CmdControllerImpl.h" />
+    <ClInclude Include="src\CmdDeCoderImpl.h" />
+    <ClInclude Include="src\CmdEnCoderIF.h" />
+    <ClInclude Include="src\CmdEnCoderImpl.h" />
+    <ClInclude Include="src\DataConsumerIF.h" />
+    <ClInclude Include="src\DataProvider.h" />
+    <ClInclude Include="src\DeCoder.h" />
+    <ClInclude Include="src\DIBImage.h" />
+    <ClInclude Include="src\DisplayIF.h" />
+    <ClInclude Include="src\EngineIF.h" />
+    <ClInclude Include="src\EngineImpl.h" />
+    <ClInclude Include="src\ICmdConsumer.h" />
+    <ClInclude Include="src\ImgConsumerIF.h" />
+    <ClInclude Include="src\ImgControllerImpl.h" />
+    <ClInclude Include="src\ImgDeCoderImpl.h" />
+    <ClInclude Include="src\ImgDisplayImpl.h" />
+    <ClInclude Include="src\ImgObjectImpl.h" />
+    <ClInclude Include="src\LibConst.h" />
+    <ClInclude Include="src\ITPDeCoderImpl.h" />
+    <ClInclude Include="src\SocketChannelImpl.h" />
+    <ClInclude Include="src\VDCmd.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="_ICmdCoderDTEvents_CP.h" />
+    <ClInclude Include="_IEngineEvents_CP.h" />
+    <ClInclude Include="_IImgControllerEvents_CP.h" />
+    <ClInclude Include="_IImgDisplayEvents_CP.h" />
+    <ClInclude Include="_IImgObjectEvents_CP.h" />
+    <ClInclude Include="_ISocketChannelEvents_CP.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DetectorLib.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CmdCoderDT.rgs" />
+    <None Include="CmdController.rgs" />
+    <None Include="DetectorLib.def" />
+    <None Include="DetectorLib.rgs" />
+    <None Include="Engine.rgs" />
+    <None Include="ImgCoder.rgs" />
+    <None Include="ImgController.rgs" />
+    <None Include="ImgDisplay.bmp" />
+    <None Include="ImgDisplay.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="ImgDisplay.rgs" />
+    <None Include="ImgObject.rgs" />
+    <None Include="ReadMe.txt" />
+    <None Include="SocketChannel.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="DetectorLib.idl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
